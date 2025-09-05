@@ -1,6 +1,7 @@
 // Deasafio Super Trunfo - Países
-// Tema 1 - Cadastro de Cartas
+// Tema 2 - Lógica
 // Teste Samuel Alves Campos
+
 
 #include <stdio.h>
 
@@ -63,11 +64,8 @@
 
         pib_per_capita = populacao / pib;
         printf("PIB per Capita: %.2f reais\n", pib_per_capita);
-        
-        superPoder = (float) populacao + area + pib + (float)pontos + pib_per_capita + (1.0f / densidade);
-        printf("Super Poder: %.2f\n\n", superPoder);
 
-        //Coleta de dados Carta 2
+         //Coleta de dados Carta 2
 
         printf("Carta 2:\n");
         printf("Digite o Estado (A-H): ");
@@ -108,24 +106,13 @@
 
         pib_per_capita1 = populacao1 / pib1;
         printf("PIB per Capita: %.2f reais\n", pib_per_capita1);
-        
-        superPoder1 = (float) populacao1 + area1 + pib1 + (float)pontos1 + pib_per_capita1 + (1.0f / densidade1);
-        printf("Super Poder: %.2f\n\n", superPoder1);
 
-        //Comparações das Cartas
+        //Decisão
 
-        printf("*** Comparações das Carta ***\n");
-        printf("*** OBS: Resultado 1 - Carta 1 vence / Resultado 0 - Carta 2 vence!***\n");
-        printf("*** Na densidade Resultado 1 - Carta 2 vence / Resultado 0 - Carta 1 Vence! ***\n\n");
-
-        printf("População: %d\n", populacao > populacao1);
-        printf("Área: %d\n", area > area1);
-        printf("PIB: %d\n", pib > pib1);
-        printf("Pontos Turísticos: %d\n", pontos > pontos1);
-        printf("Densidade Populacional: %d\n", densidade < densidade1);
-        printf("PIB per Capita: %d\n", pib_per_capita > pib_per_capita1);
-        printf("Super Poder: %d\n", superPoder > superPoder1);
-
-
+        if (pib > pib1) {
+            printf("Carta 1 venceu! \n");
+        } else {
+            printf("Carta 2 venceu! \n");
+        }
         return 0;
     }
