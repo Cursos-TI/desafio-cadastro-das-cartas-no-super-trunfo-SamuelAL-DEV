@@ -183,7 +183,7 @@
             if (pib_per_capita == pib_per_capita1)
             {
                 printf("As Cartas Empataram!");
-            } else if (pib_per_capita > pib_per_capita1)
+            } else if (pib_per_capita < pib_per_capita1)
             {
                 printf("Cidade %s venceu!\n", cidade);
             }else{
